@@ -5,7 +5,12 @@ angular.module('app.controllers', [])
 })
    
 .controller('page1Ctrl', function($scope) {
-
+	var currentYear = new Date().getFullYear()
+	var years = [];
+	for (var i = currentYear - 100; i <= currentYear; i++) {
+		years.push(i);
+	}
+	$scope.years = years;
 })
    
 .controller('page2Ctrl', function($scope) {

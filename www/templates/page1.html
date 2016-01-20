@@ -13,45 +13,54 @@
         </div>
         <form class="list">
             <label class="item item-input">
-                <span class="input-label">Input</span>
+                <span class="input-label">First Name</span>
                 <input type="text" placeholder="">
             </label>
-        </form>
-        <div>
-            <p>
-                <strong>Last Name</strong>
-            </p>
-        </div>
-        <form class="list">
-            <label class="item item-input" name="Name">
-                <span class="input-label">First Name</span><textarea placeholder=""> </textarea>
+            <br />
+            <label class="item item-input">
+                <span class="input-label">Last Name</span>
+                <input type="text" placeholder="">
             </label>
-        </form>
-        <div>
-            <p>
-                <strong>Age</strong>
-            </p>
-        </div>
-        <form class="list">
+            <br />
             <label class="item item-select">
-                <span class="input-label">Select</span>
+                <span class="input-label">Age</span>
                 <select>
-                    <option></option>
+                    <option ng-repeat="item in object">{{item}}</option>
                 </select>
             </label>
-            <div>
-                <p>&lt;br /&gt;
-                    <strong>Date of Birth</strong>
-                </p>
+            <br />
+            <div class="row item">
+                <div class="col item item-input">
+                    <label class="item item-input">
+                    <span class="input-label">Birth Month</span>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="col item item-input">
+                    <label class="item item-input">
+                    <span class="input-label">Birth Day</span>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="col item item-input">
+                    <label class="item item-input">
+                    <span class="input-label">Birth Year</span>
+                    <input type="text" placeholder="">
+                </div>
             </div>
-            <label class="item item-select">
-                <span class="input-label">Select</span>
-                <select>
-                    <option></option>
-                </select>
-            </label>
         </form>
-        <a href="#/page2" class="button button-stable  ">Tap me!</a>
-        <form class="list"></form>
     </ion-content>
+
 </ion-view>
+
+<ion-footer-bar class="bar-stable">
+    <div class="row row-center">
+        <div class="col col-20" align="left">
+            <a href="#/start" class="button button-stable">Back</a>
+        </div>
+        <div class="col col-60" align="center">
+            <progress value="22" max="100"></progress>
+        </div>
+        <div class="col col-20" align="right">
+            <a href="#/page2" aligh="right" class="button button-stable">Next</a>
+        </div>
+    </div>
+</ion-footer-bar>
