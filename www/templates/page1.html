@@ -30,20 +30,23 @@
             </label>
             <br />
             <div class="row item">
-                <div class="col item item-input">
-                    <label class="item item-input">
+                <div class="col item item-select">
                     <span class="input-label">Birth Month</span>
-                    <input type="text" placeholder="">
+                    <select>
+                        <option ng-repeat="month in months">{{month}}</option>
+                    </select>
                 </div>
-                <div class="col item item-input">
-                    <label class="item item-input">
+                <div class="col item item-select">
                     <span class="input-label">Birth Day</span>
-                    <input type="text" placeholder="">
+                    <select>
+                        <option ng-repeat="day in days">{{day}}</option>
+                    </select>
                 </div>
-                <div class="col item item-input">
-                    <label class="item item-input">
+                <div class="col item item-select">
                     <span class="input-label">Birth Year</span>
-                    <input type="text" placeholder="">
+                    <select>
+                        <option ng-repeat="year in years">{{year}}</option>
+                    </select>
                 </div>
             </div>
         </form>
@@ -60,7 +63,7 @@
             <progress value="22" max="100"></progress>
         </div>
         <div class="col col-20" align="right">
-            <a href="#/page2" aligh="right" class="button button-stable">Next</a>
+            <a href="#/page2" aligh="right" class="button button-stable" ng-disabled="true">Next</a>
         </div>
     </div>
 </ion-footer-bar>
